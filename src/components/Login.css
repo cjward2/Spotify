@@ -1,14 +1,14 @@
 .login__container {
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
   background-image: url('../images/login-background.jpg');
   height: 100vh;
 }
 
 .login__logo {
-    height: 200px;
+    height: 21vh;
 }
 
 .login__button {
@@ -19,6 +19,7 @@
   font-weight: 600;
   letter-spacing: 0.18rem;
   background-color: #00D856;
+  margin-top: 300px;
 }
 
 .login__button:hover {
@@ -33,4 +34,11 @@
     font-weight: 600;
     color: whitesmoke;
     opacity: 0.8;
+}
+
+/* drop typewriter line when screen size is 643px or below. It looks weird on smaller screens */
+@media only screen and (max-width: 643px) {
+  .login__typewriter {
+    display: none;
+  }
 }

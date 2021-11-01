@@ -9,9 +9,10 @@ const Login = () => {
         <div className="login__container">
             <Fade bottom>
             <img className="login__logo" src="/images/spotify-logo.png" alt="Spotify Logo" />
+            <Typewriter className="login__typewriter" typing={ 1 }>It's like normal Spotify... except it doesn't make Matt angry</Typewriter>
             
             <a className="login__button" href="#">Login to Spotify</a>
-            {/* <Typewriter className="login__typewriter" typing={ 0.7 }>except it doesn't make Matt angry!</Typewriter> */}
+            
             </Fade>
         </div>
         
