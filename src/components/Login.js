@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
-import Fade from 'react-reveal/Fade'
-import Typewriter from 'react-typewriter'
+import Fade from 'react-reveal/Fade';
+import Typewriter from 'react-typewriter';
 import './Login.css'
 import { loginUrl } from '../spotify'
 
