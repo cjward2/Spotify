@@ -1,2 +1,11 @@
 .body {
+    /* border: 1px solid blue; */
+    flex: 80%;
+    /* this means: USE 80% of the flex space! */
+
+    background: linear-gradient(rgb(252, 168, 225), rgb(254, 207, 56));
+    /* sick gradient, bro */
+    color: white;
+    padding: 30px;
+    height: 100vh;
 }

@@ -1,4 +1,21 @@
 .sidebar {
-    border: 1px solid rgba(218, 0, 138, 0.842);
+    /* border: 1px solid rgba(218, 0, 138, 0.842); */
     height: 100vh;
+    flex: 20%;
+    /* use 20% of the flex area for this element! */
+    /* our other one is set at flex 0.8, for a total of 100% */
+    background-color: rgb(1, 71, 92);
+    color: white;
+    height: 100vh;
+    min-width: 230px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.sidebar_logo {
+    object-fit: contain;
+    /* this preserves your aspect ration if you change the proportions! */
+    height: 70px;
+    padding: 10px;
+    margin-right: auto;
 }
