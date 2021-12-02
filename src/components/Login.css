@@ -7,6 +7,7 @@
     flex-direction: column;
     align-items: center;
     background-image: url('../images/chiller.jpeg');
+    background-size: cover;
     height: 100vh;
 }
 
