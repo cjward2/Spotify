@@ -8,4 +8,62 @@
     color: white;
     padding: 30px;
     height: 100vh;
+    overflow-y: overlay;
+    /* this fixes a problem with our background not extending all the way down the playlist */
+}
+
+.body::-webkit-scrollbar {
+    display: none;
+}
+/* now our scollbar is hidden, but we can still scroll! */
+
+.body_info {
+    display: flex;
+    align-items: flex-end;
+    padding: 10px;
+}
+
+.body_infoText {
+    flex: 1;
+}
+
+.body_infoText > h2 {
+    font-size: 48px;
+    margin-bottom: 10px;
+}
+
+.body_infoText > p {
+    font-size: 14px;
+}
+
+.body_info > img {
+    height: 20vw;
+    /* this seemed weird to me: setting height in VIEWER WIDTH units, but it actually makes the little image responsive in size as you change your window size */
+}
+
+.body_icons {
+    display: flex;
+    align-items: center;
+}
+
+.body_icons > .MuiSvgIcon-root {
+    margin-right: 20px;
+    /* this serparates our icon elements a little */
+}
+
+.body_shuffle {
+    font-size: 80px !important;
+    margin-left: 50px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.body_shuffle:hover {
+    transition: 100ms transform ease-in;
+    transform: scale(1.08);
+    /* now our big play button grows when you hover */
+}
+
+.body_songs {
+    margin: 20px -30px;
+    /* negative values GO AGAINST THE PADDING IN THE CONTAINER! neat! */
 }

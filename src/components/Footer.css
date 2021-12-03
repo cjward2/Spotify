@@ -6,4 +6,69 @@
     /* border: 2px solid magenta; */
     background-color: #282828;
     padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    /* items are spaced evenly horizontally */
+    width: 97%;
+    /* the width thing is some kind of spacing workaround */
+}
+
+.footer_right * .MuiSlider-root {
+    /* this targets our little volume slider! */
+    color: #1ed15e;
+}
+
+/* note: we can set flex percentages on these child divs because WE TOLD THE PARENT COMPONENT TO DISPLAY FLEX! YAY! */
+.footer_left {
+    flex: 30%;
+    display: flex;
+    align-items: center;
+    color: white;
+    width: 300px;
+}
+
+.footer_center {
+    /* these are our shuffle/play/pause/skip buttons */
+    flex: 40%;
+    padding: 0 100px;
+    /* 0 top and bottom, 100 l and r */
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 300px;
+    /* now we have icons that are evenly spaced out, but won't get CRAZY far apart if the screen is wide. no wider than 300pixels */
+}
+
+.footer_right {
+    flex: 30%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+}
+
+.footer_albumLogo {
+    height: 60px;
+    width: 60px;
+    margin-right: 20px;
+    object-fit: contain;
+}
+
+.footer_green {
+    color: #1ed15e;
+}
+
+.footer_songInfo > h4 {
+    margin-bottom: 5px;
+}
+
+.footer_songInfo > p {
+    font-size: 12px;
+}
+
+.footer_icon:hover,
+.footer_green:hover {
+    transition: transform 0.2s ease-in-out;
+    transform: scale(1.2) !important;
 }

@@ -41,6 +41,10 @@ function App() {
             spotify.setAccessToken(_token)
             //here we're using the SPOTIFY WEB API! we set our state "token" to be spotify's "_token"
             // once we plug this key in, react and spotify can talk freely with each other. We're now Logged In.
+            dispatch({
+                type: 'SET_SPOTIFY',
+                spotify: spotify
+            })
             spotify.getMe().then(user => {
                 // console.log('This is the user, if they exist:', user)
 
@@ -56,18 +60,30 @@ function App() {
                     //change the user field in the DataLayer to be our current user. now this value can be pulled by any component, regardless of where it is in the parent-child hierarchy. no props-drilling necessary!
                 })
             })
+            spotify.getUserPlaylists().then(playlists => {
+                dispatch({
+                    type: 'SET_PLAYLISTS',
+                    playlists: playlists
+                })
+            })
+            spotify.getPlaylist('37i9dQZEVXcSV1obgHZIYy').then(response =>
+                dispatch({
+                    type: 'SET_DISCOVER_WEEKLY',
+                    discover_weekly: response
+                })
+            )
         }
 
-        console.log('BAAAAA I HAVE A TOKEN! ', _token)
-    }, [])
+        // console.log('BAAAAA I HAVE A TOKEN! ', _token)
+    }, [token, dispatch])
     //the empty array as a second argument in useEffect is significant. Why?
-    //
-    //awesome! now, when we load our page, we get the token object from the url!
-    //check the spotify script to see how
+    //psych, it's no longer an empty array, because according to the repo, we need to pass [token, dispatch]. why?
 
     console.log('the sick ass user of this sick app is: ', user)
     // a check to see if we're able to pull {user} out of the DataLayer, see above
     console.log('lets grab the token from our DataLayer: ', token)
+
+    //now lets get our PLAYLISTS!
 
     return (
         <div className="App">

@@ -1,0 +1,36 @@
+/* not gonna lie, i just cut n pasted this stylesheet from the github repo */
+/* but then i quickly realized that these dudes are using double underscores, whereas i just used a single underscore any time there was a className that needed one. So I made that little change */
+
+.songRow {
+    margin-left: 20px;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    z-index: 100;
+    color: white;
+}
+
+.songRow:hover {
+    cursor: pointer;
+    background-color: black;
+    opacity: 0.8;
+}
+
+.songRow_info {
+    margin-left: 20px;
+}
+
+.songRow_info > h1 {
+    font-size: 16px;
+}
+
+.songRow_info > p {
+    font-size: 14px;
+    margin-top: 3px;
+    color: gray;
+}
+
+.songRow_album {
+    height: 40px;
+    width: 40px;
+}

@@ -5,7 +5,8 @@ function SidebarOption({ title, Icon }) {
     // note the capital letter Icon, signifying a COMPONENT!
     return (
         <div className="sidebarOption">
-            <p>{title}</p>
+            {Icon && <Icon className="sidebarOption_icon" />}
+            {Icon ? <h4>{title}</h4> : <p>{title}</p>}
         </div>
     )
 }

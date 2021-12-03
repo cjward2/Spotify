@@ -1,0 +1,31 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+
+.header_left {
+    background-color: white;
+    color: grey;
+    min-width: 70px;
+    /* this is our search input box, we can play around with how wide it should be */
+    border-radius: 30px;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.header_left > input {
+    /* input tags that are direct children of header_left */
+    border: none;
+    width: 100%;
+}
+
+.header_right {
+    display: flex;
+    align-items: center;
+}
+
+.header_right > h4 {
+    margin-left: 10px;
+}
