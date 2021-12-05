@@ -11,10 +11,7 @@ function Header({ spotify }) {
         <div className="header">
             <div className="header_left">
                 <SearchIcon />
-                <input
-                    type="text"
-                    placeholder="search for something, Jabroni"
-                />
+                <input type="text" placeholder="search for something, yo" />
             </div>
             <div className="header_right">
                 <Avatar src={user?.images[0]?.url} alt={user?.display_name} />
