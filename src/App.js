@@ -33,6 +33,7 @@ function App() {
             dispatch({
                 type: 'SET_TOKEN',
                 token: _token
+                
             })
 
             // setToken(_token)
